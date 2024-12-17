@@ -341,7 +341,7 @@ class ProfCoursTest extends TestCase
         $this->assertTrue($val, "Update du prof num $idProf ...\n");
 
         // Cours
-        $cours = new Cours($this->intitule, $this->duree, $this->idprof);
+        $cours = new Cours($this->intitule, $this->duree);
         $val = $cours->updateOne($conn, $idCours);
         $expected_cours_str = $cours->__toString();
         $record_cours = Cours::printOne($conn, $idCours);
